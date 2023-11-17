@@ -1,0 +1,52 @@
+* {
+    margin: 2px;
+    text-align: center;
+    padding-top: 10px;
+  }
+  body{
+    background-image: url("media/img.jpeg");
+  }
+  .cont1 {
+    font-size: 30px;
+    font-weight: 500;
+    font-style: normal;
+    box-sizing: border-box;
+    border: 2px solid black;
+    margin-left: 250pt;
+    margin-right: 250pt;
+    background-color: beige;
+  }
+  button{
+    background-color: #4CA750;
+  }
+  button:hover{
+    opacity: 0.8;
+  }
+  .tlc1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+    font-weight: 400;
+    text-decoration: dotted;
+  }
+  .tlc2 a:hover,
+  .tlc2{
+    font-size: 20px;
+    color: orange;
+  }
+  .cont2{
+    font-size: 25px;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+    border: 2px solid black;
+    margin-left: 250pt;
+    margin-right: 250pt;
+    background-color: beige;
+  }
+  .rgt1 a:hover,
+  .rgt1{
+    font-size: 25px;
+    text-align: right;
+    color: yellow;
+  }
+  

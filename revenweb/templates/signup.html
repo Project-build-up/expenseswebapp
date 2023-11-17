@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sign Up Page</title>
+    <link
+      rel="website icon"
+      type="png"
+      href="{% static 'media/download.png' %}"
+    />
+    <link rel="stylesheet" href="{% static 'style2.css' %}" />
+  </head>
+  <body>
+    <div class="rgt1">
+      Already have an account?<a href="login.html">LogIn</a>
+    </div>
+    <div class="tlc1"><h2>Enter details to Sign Up</h2></div>
+    <div class="cont2">
+      <h1>Sign In</h1>
+      <form id="res1" method="post">
+        <label for="name">Enter Full Name</label><br />
+        <input type="text" id="name" placeholder="@entername" /><br />
+        <label for="number">Enter Phone Number</label><br />
+        <input type="tel" id="number" placeholder="@enterphone" /><br />
+        <label for="useremail">Enter email</label><br />
+        <input type="text" id="user" placeholder="@email" /><br />
+        <label for="username">Create username</label><br />
+        <input type="text" id="username" placeholder="@user" value="" /><br />
+        <label for="password">Create Password</label><br />
+        <input
+          type="text"
+          id="password"
+          placeholder="@pass123"
+          value=""
+        /><br />
+        <div class="tlc2">
+          <button type="submit" name="Signup">Submit</button>
+        </div>
+      </form>
+    </div>
+    <div></div>
+  </body>
+</html>

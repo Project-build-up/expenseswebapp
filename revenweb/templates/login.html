@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Log In</title>
+    <link rel="website icon" type="png" href="media/download.png" />
+    <link rel="stylesheet" href="{% static 'style2.css' %}" />
+  </head>
+  <body>
+    <div class="rgt1">
+      New User? continue to<a href="signuppage.html">Signup</a>
+    </div>
+    <div class="tlc1">
+      <h2>Enter Your Credentials</h2>
+    </div>
+    <br />
+    <div class="cont1">
+      <h1>Log In</h1>
+      <form id="res1" method="post">
+        <label for="user">Enter Username or email</label><br />
+        <input
+          type="text"
+          id="user"
+          placeholder="@Username"
+          name="username"
+          required
+        /><br />
+        <label for="password">Enter Password</label><br />
+        <input
+          type="text"
+          id="password"
+          placeholder="@pass"
+          name="password"
+          required
+        /><br />
+        <div class="tlc2">
+          <input type="checkbox" checked="checked" />Remember Me<br />
+          <button type="submit" name="LogIn">Submit</button><br />
+          forgot<a href="#">password?</a>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
