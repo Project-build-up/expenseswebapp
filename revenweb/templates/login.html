@@ -9,7 +9,7 @@
   </head>
   <body>
     <div class="rgt1">
-      New User? continue to<a href="signuppage.html">Signup</a>
+      New User? continue to<a href="{% url 'signup' %}">Signup</a>
     </div>
     <div class="tlc1">
       <h2>Enter Your Credentials</h2>
@@ -17,26 +17,28 @@
     <br />
     <div class="cont1">
       <h1>Log In</h1>
-      <form id="res1" method="post">
-        <label for="user">Enter Username or email</label><br />
+      {% for message in messages %}
+      <h3>{{message}}</h3>
+      {% endfor %}
+      <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        <label for="user">Enter username</label><br />
         <input
           type="text"
-          id="user"
-          placeholder="@Username"
+          placeholder="@username"
           name="username"
           required
         /><br />
         <label for="password">Enter Password</label><br />
         <input
-          type="text"
-          id="password"
+          type="password"
           placeholder="@pass"
           name="password"
           required
         /><br />
         <div class="tlc2">
           <input type="checkbox" checked="checked" />Remember Me<br />
-          <button type="submit" name="LogIn">Submit</button><br />
+          <input type="submit" /><br />
           forgot<a href="#">password?</a>
         </div>
       </form>

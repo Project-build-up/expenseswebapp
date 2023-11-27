@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Revensite</title>
+  </head>
+  <body>
+    {% if user.is_authenticated %}
+    <h1>Welcome {{user.username}}</h1>
+    <a class="#" href="{% url 'logout' %}">Logout..</a>
+    <div>
+      <h3>Choose action:</h3>
+      <a class="#" href="{% url 'addexp' %}">Enter your Income</a>
+      <a class="#" href="{% url 'incspent' %}">Enter Expenses</a>
+    </div>
+    {% else %}
+    <h1>Hey good to see you.</h1>
+    <p class="#">
+      If you are already an user <a href="{% url 'login' %}">Login</a> to
+      continue<br />
+      New to revensite create an account
+      <a href="{% url 'signup' %}"> Create</a>
+    </p>
+    {% endif %}
+  </body>
+</html>
