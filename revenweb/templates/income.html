@@ -4,27 +4,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Expense Tracker</title>
-    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <title>Personal Income Tracker</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="{% static 'style3.css' %}" />
   </head>
   <body>
     <header>
-      <h1>Personal Expense Tracker</h1>
+      <h1>Personal Income Tracker</h1>
     </header>
     <div id="app">
-      <h2>Add Expense</h2>
-      <form id="expenseForm">
-        <label for="expenseInput">Expense:</label>
+      <h2>Add Income</h2>
+      <form id="incomeForm">
+        <label for="sourceInput">Source:</label>
         <input
           type="text"
-          id="expenseInput"
-          placeholder="Enter expense"
+          id="sourceInput"
+          placeholder="Enter income source"
           required
         />
         <label for="amountInput">Amount:</label>
@@ -34,21 +34,22 @@
           placeholder="Enter amount"
           required
         />
-        <button type="button" onclick="addExpense()">Add Expense</button>
+        <button type="button" onclick="addIncome()">Add Income</button>
       </form>
-      <h2>Expense List</h2>
-      <ul id="expenses"></ul>
-      <p id="total">Total Expenses: $<span id="totalExpenses">0</span></p>
+      <h2>Income List</h2>
+      <ul id="incomes"></ul>
+      <p id="total">Total Income: $<span id="totalIncomes">0</span></p>
     </div>
     <footer class="d-flex justify-content-center py-3">
       <ul class="nav nav-pills">
         <li class="nav-item">
-          <a href="./income.html" class="nav-link active" aria-current="page"
-            >Add Income</a
+          <a href="./index.html" class="nav-link active" aria-current="page"
+            >Add Expense</a
           >
         </li>
       </ul>
     </footer>
-    <script src="./script.js"></script>
+
+    <script src="./script2.js"></script>
   </body>
 </html>
