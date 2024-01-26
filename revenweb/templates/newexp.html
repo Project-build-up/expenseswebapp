@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="alg">
+      <a href="/"><i class="bx bxs-home"></i></a>
+    </div>
+    <div class="container">
+      <h1>Expense Tracker</h1>
+      <div id="balance">Balance: $0.00</div>
+      <div id="expenses">
+        <h2>Expenses</h2>
+        <ul id="expenseList"></ul>
+        <p id="totalExpenses">Total Expenses: $0.00</p>
+      </div>
+      <a href="{% url 'incsal' %}"
+        ><button type="submit" class="inc">Add Income</button></a
+      >
+      <div id="addExpense">
+        <h2>Add Expense</h2>
+        <form id="expenseForm" method="post" action="{% url 'incspent' %}">
+          {% csrf_token %}
+          <label for="expenseName">Name:</label>
+          <input type="text" name="expenseName" required />
+          <label for="expenseAmount">Amount:</label>
+          <input type="number" name="expenseAmount" required />
+          <button type="submit">Add Expense</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

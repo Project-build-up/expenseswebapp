@@ -1,10 +1,9 @@
 from django.db import models
 
 # Create your models here.
-class Signdata(models.Model):
-    email=models.EmailField(max_length=100)
-    username=models.CharField(max_length=200)
-    password=models.CharField(max_length=16)
-#class Logindata(models.Model):
-
-    
+class Income(models.Model):
+    income=models.CharField(max_length=100)
+    amount=models.IntegerField(null=True)
+class Expense(models.Model):
+    expense=models.CharField(max_length=100)
+    spent=models.IntegerField(null=True)
