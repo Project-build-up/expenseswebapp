@@ -1,27 +1,129 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Revensite</title>
+    <title>revensite</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link href="{% static 'style10.css' %}" rel="stylesheet" />
   </head>
   <body>
-    {% if user.is_authenticated %}
-    <h1>Welcome {{user.username}}</h1>
-    <a class="#" href="{% url 'logout' %}">Logout..</a>
-    <div>
-      <h3>Choose action:</h3>
-      <a class="#" href="{% url 'addexp' %}">Enter your Income</a>
-      <a class="#" href="{% url 'incspent' %}">Enter Expenses</a>
-    </div>
-    {% else %}
-    <h1>Hey good to see you.</h1>
-    <p class="#">
-      If you are already an user <a href="{% url 'login' %}">Login</a> to
-      continue<br />
-      New to revensite create an account
-      <a href="{% url 'signup' %}"> Create</a>
-    </p>
-    {% endif %}
+    <header>
+      <h1>EXPENSE TRACKER</h1>
+      <h3>Time is:<span id="time"></span></h3>
+    </header>
+
+    <main>
+      {% if user.is_authenticated %}
+      <h1>Welcome {{user.username}}</h1>
+      <nav>
+        <a href="{% url 'welcome' %}">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="{% url 'incsal' %}">Income</a>
+        <a href="{% url 'incspent' %}">Expenditure</a>
+        <a href="{% url 'download' %}" target="_blank">Download Report</a>
+        <a href="{% url 'logout' %}">LOGOUT</a></ul>
+      </nav>
+
+      {% else %}
+      <h1>Hey good to see you!!</h1>
+      <h3>
+        If you are an existing user Login to Continue<br />
+        New to our site sign up for free
+      </h3>
+
+      <nav>
+        <a href="{% url 'welcome' %}">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="{% url 'login' %}">Login</a>
+        <a href="{% url 'signup' %}">Signup</a>
+      </nav>
+      {% endif %}
+    </main>
+      <!-- about-->
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <div id="about">
+<br><br><br><center><a href="#">Back To Main</a></center>
+        <div class="about">
+          <h1> About Our Application</h1>
+          <p>
+            This Site is used To track Personal expenses in day-day <br>
+            life of any individual who spends money on daily basis. <br>
+            <br>
+            As a part of human race its very common for us to forget <br>
+            about many things and its ok. But forgetting your money <br>
+            can be treachorous, thus we bring you expense tracker <br>
+            where you can sum up yor expenses get daily reports of<br>
+            and is secured in with your login. 
+            
+            <pre class="tex">Happy Tracking</pre>
+          </p>
+        </div>
+      </div>
+      <!--about end-->
+      <!------------contact----------->
+      <br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br>
+      <footer>
+        <center><a href="#">Back To Main</a></center>
+      <div id="contact">
+        <div class="container">
+          <div class="row">
+            <div class="contact-left">
+              <h2>CONTACT US</h2>
+              <br><br><br><br>
+             <!-- <p>
+                <i class="fa-solid fa-envelope"></i>revenuesite@gmail.com
+              </p>
+              <p><i class="fa-solid fa-phone"></i>6378xxxxxx</p>-->
+            </div>
+            <div class="contact-right">
+              <form name="submit-to-google-sheet">
+                <input
+                  type="text"
+                  name="Name"
+                  placeholder="Your Name"
+                  required
+                />
+                <input
+                  type="text"
+                  name="e-mail"
+                  placeholder="Your E-mail"
+                  required
+                />
+                <textarea
+                  name="message"
+                  rows="6"
+                  placeholder="Your Message"
+                ></textarea>
+                <button type="submit" class="btn btn2">Submit</button>
+              </form>
+              <span id="msg"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      </footer>
+      <!--contact end-->
+      <script>
+        var datetime = new Date();
+        console.log(datetime);
+        document.getElementById("time").textContent = datetime;
+      </script>
   </body>
 </html>
