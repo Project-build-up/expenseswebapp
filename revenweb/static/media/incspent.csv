@@ -43,3 +43,6 @@ expenseAmount,4000
 csrfmiddlewaretoken,CoCW9GVHvH7NWPBOsDDCuiATHFgagwQqRFH33gSXoXuVwtgLEHrhb5ogClH2F0LV
 expenseName,grocery
 expenseAmount,800
+csrfmiddlewaretoken,IAjsz7qQcOrCQFrBvtm0FFuf5bmwPWI9i4nFED8OACP0SLAClIRrjj9tQOCV9NbU
+expenseName,grocery
+expenseAmount,700

@@ -1,2 +1,3 @@
 /venv
 revenweb/db.sqlite3
+*__pycache__
